@@ -1,18 +1,19 @@
 #include<string>
+#include"encode.h"
 using namespace std;
 string encode(const string &data){
-    string res; //è¦å›å‚³çš„ç­”æ¡ˆ
-    unsigned sameCnt = 0; //è¨ˆç®—ç¾åœ¨å­—å…ƒé‡è¤‡é€£çºŒå‡ºç¾çš„æ¬¡æ•¸
+    string res; //­n¦^¶Çªºµª®×
+    unsigned sameCnt = 0; //­pºâ²{¦b¦r¤¸­«½Æ³sÄò¥X²{ªº¦¸¼Æ
     for(size_t i = 0; i < data.size(); ++i){
         if( i && data[i] == data[i-1] ){
             ++sameCnt;
         }else{
-            //ç™¼ç¾ç¾åœ¨çš„å­—å…ƒå’Œå‰ä¸€å€‹å­—å…ƒä¸ä¸€æ¨£çš„æ™‚å€™è©²æ€è¾¦å‘¢?
+            //µo²{²{¦bªº¦r¤¸©M«e¤@­Ó¦r¤¸¤£¤@¼Ëªº®É­Ô¸Ó«ç¿ì©O?
             sameCnt = 1;
         }
     }
     if( sameCnt > 0 ){
-        //ä¸è¦å¿˜è¨˜è™•ç†æœ€å¾Œä¸€å€‹å­—å…ƒ
+        //¤£­n§Ñ°O³B²z³Ì«á¤@­Ó¦r¤¸
     }
     return res;
 }

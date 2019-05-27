@@ -5,10 +5,10 @@
 using namespace std;
 string readData(const string &path){
     ifstream fin;
-    fin.open(path, ios::binary);
-    vector<char> buffer(istreambuf_iterator<char>(fin), {});
+    fin.open(path.c_str(), ios::binary);
+    vector<char> buffer( (istreambuf_iterator<char>(fin)), istreambuf_iterator<char>() );
     string res;
-    for(auto c:buffer) res +=c;
+    for(size_t i=0; i<buffer.size(); ++i) res +=buffer[i];
     return res;
 }
 int main(int argc, char *argv[]){

@@ -1,17 +1,18 @@
 #include<string>
 #include<cctype>
+#include"decode.h" 
 using namespace std;
 string decode(const string &data){
-    string res; //è¦å›å‚³çš„ç­”æ¡ˆ
-    int cnt=0; //æŸå€‹å­—å…ƒæœƒå‡ºç¾å¹¾æ¬¡
+    string res; //­n¦^¶Çªºµª®×
+    int cnt=0; //¬Y­Ó¦r¤¸·|¥X²{´X¦¸
     for(size_t i = 0; i < data.size(); ++i){
         if(isdigit(data[i])){
             cnt = cnt * 10 + data[i] - '0';
         }else{
             if( cnt == 0 ){
-                // å¦‚æœdata[i]çš„å‰é¢æ²’æœ‰æ•¸å­—ä»£è¡¨ä»€éº¼?
+                // ¦pªGdata[i]ªº«e­±¨S¦³¼Æ¦r¥Nªí¤°»ò?
             }else{
-                // å¦‚æœdata[i]å‡ºç¾cntæ¬¡çš„è©±è©²æ€éº¼åšå‘¢?
+                // ¦pªGdata[i]¥X²{cnt¦¸ªº¸Ü¸Ó«ç»ò°µ©O?
             }
             cnt = 0;
         }
