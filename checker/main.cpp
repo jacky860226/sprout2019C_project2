@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip> 
 #include<fstream>
 #include<string>
 #include<vector>
@@ -26,6 +27,6 @@ int main(int argc, char *argv[]){
     		return 0;
 		}
 	}
-    cout << "Your compression ratio is: " << compress.size()*100.0/origin.size() << "%\n";
+    cout << fixed  <<  setprecision(6) << "Your compression ratio is: " << compress.size()*100.0/origin.size() << "%\n";
     return 0;
 }
