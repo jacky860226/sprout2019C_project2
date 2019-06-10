@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     string origin = readData(argv[1]);
     string compress = readData(argv[2]);
     string decompress;
-    if(argc>2){
+    if(argc>3){
     	decompress = readData(argv[3]);
     	if(origin != decompress){
     		cout<<"Wrong Answer!\n";
